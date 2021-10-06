@@ -1,90 +1,88 @@
 *{
-    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
 }
-.max-width{
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-}
-.navbar{
+header{ 
+    background: crimson;
+    padding: 10px;
+    color: white;
     position: fixed;
     width: 100%;
-    padding: 30px 0;
-    transition:all 0.3s ease;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+header .logo{
     text-transform: capitalize;
-    z-index: 999;
-    background: hotpink;
+    /* display:inline-block; */
+    padding:10px 50px;
 }
-.navbar .max-width{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-}
-.navbar .logo a{
+header .logo h1{
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 900;
     color: white;
 }
-.navbar .logo a span{
-    font-size: 35px;
-    font-weight: 600;
-    color:crimson;
+header nav{
+    float: right;
+    padding: 10px 40px;
+    text-transform: capitalize;
 }
-.navbar .menu li{
+header nav ul{
     list-style-type: none;
-    display: inline-block;
+    font-size: 20px;
 }
-.navbar .menu li a{
+header nav ul li{
+   display: inline-block;
+   padding: 0 20px;
+}
+header nav ul li a{
+    text-decoration: none;
     color: white;
-    font-size: 18px;
-    font-weight: 800;
-    margin-left: 25px;
-    transition: color 0.3s ease;
 }
-.navbar .menu li a:hover{
-    color: crimson;
+header nav ul li a:hover{
+    color: black;
+    transition: all 0.3s ease;
 }
-/* menu */
 .menu-btn{
     width: 20%;
     height: 20px;
     color: white;
     font-size: 23px;
     cursor: pointer;
-    text-align: center;
+    text-align: right;
+    padding: 10px;
     display: none; 
 }
-
-
 /* home section */
+section{
+    padding: 100px 0;
+}
 .home{
-    display: flex;
-    background-image: url(..//img/wp3422198.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    display:flex;
     height: 100vh;
     min-height: 500px;
     color: white;
+    background-image: url(..//img/wp3422198.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.home .max-width{
-    margin: auto 0 auto 40px;
-}
+.home .homebox{
+    margin:auto 0 auto 40px;
+}   
 .home .home-content .text-1{
     font-size: 27px;
+    text-transform: capitalize;
 }
 .home .home-content .text-2{
-    font-size: 75px;
+    font-size: 65px;
     font-weight: 600;
     margin-left: -3px;
+    text-transform: capitalize;
 }
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
+    text-transform: capitalize;
 }
 .home .home-content .text-3 span{
     color: crimson;
@@ -101,190 +99,104 @@
     border: 2px solid crimson;
     transition: all 0.3s ease;
     text-transform: capitalize;
+    text-decoration: none;
 }
 .home .home-content a:hover{
     color: crimson;
     background: none;
 }
 /* about section */
-section{
-    padding: 100px 0;
-}
 .about{
-    background:rgba(128, 128, 128, 0.151);
-    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid red;
+    height: 100vh;
 }
-.about .title{
+.about h1{
     text-align: center;
-    font-size: 40px;
-    font-weight:bold;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-   text-transform: capitalize;
-   position: relative;
-}
-.about .title::before{
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 2px;
-    background: black;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.about .title::after{
-    content: 'who i am';
-    position: absolute;
-    background:white;
-    bottom: -13px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px;
-    font-size: 20px;
-    color: crimson;
-    font-weight: bolder;
-}
-.about .about-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.about .about-content .col-left{
-    width: 45%;
-}
-.about .about-content .col-left img{
-    height: 350px;
-    width: 400px;
-    background-size: cover;
-    border-radius: 6px;
-}
-.about .about-content .col-right{
-    width: 55%;
-}
-.about .about-content .col-right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about .about-content .col-right .text span{
-    color: crimson;
-}
-.about .about-content .col-right p{
-    text-align: justify;
-}
-.about .about-content .col-right a{
-    display: inline-block;
-    background: crimson;
-    color: white;
-    font-size: 20px;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
+    font-size: 30px;
+    font-weight: 900;
     text-transform: capitalize;
-    font-weight: 500;
 }
-.about .about-content .col-right a:hover{
-    color: crimson;
-    background: none;
+.about h1::before{
+    content: '';
+    width: 9%;
+    height: 4px;
+    position: absolute;
+    left: -100%;
+    background: brown;
 }
+.about h1:hover{
+    transition: 1s;
+    left: 0;
+}
+.about .aboutcontainer{
+    width: 80%;
+    margin: auto;
+}
+.about .aboutcontainer .aboutrow{
+    width: 100%;
+    clear: both;
+    margin-top: 50px;
+}
+.about .aboutcontainer .aboutrow .aboutbox{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}  
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox{
+    text-align: center;
+    overflow: auto;
+    border: 2px solid blue;
+} 
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox img{
+    width: 100%;
+    height: 350px;
+}
+
+
+
+
 
 /* responsive */
-@media screen and (max-width:1300px) {
-.home .max-width{
-        margin-left: 0px;
+@media screen and (max-width:426px){
+header{
+  display:inline-block;
+  height: 50px;
 }
-}
-@media screen and (max-width:1104px) {
-.about .about-content .col-left img{
-        height: 350px;
-        width: 350px;
-}
-}
-@media screen and (max-width:991px) {
-.max-width{
-        padding: 0 50px;
-}
-}
-@media screen and (max-width:947px) {
-.menu-btn{
-    display:block; 
-    z-index: 999;
-}
-.navbar .menu{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    left:-100%;
-    top:0;
-    background: blue;
-    text-align: center;
-    padding-top: 80px;
-    transition:all 0.5s ease;
-} 
-.navbar .menu.active{
-    left:0;
-}
-.navbar .menu li{
-    display:block;
-}   
-.navbar .menu li a{
+header .logo{
     display:inline-block;
-    margin: 20px 0;
+    padding: 10px;
+}
+header nav{
+    display: none;
+}
+.menu-btn{
+    z-index: 999;
+    display: inline;
+    float: right;
+    margin: 10px;
+}
+.home .home-content .text-1{
+    margin-top: 92px;
+}
+.home .home-content .text-2{
+    font-size: 52px;
+    margin: 5px 0;
+}
+.home .home-content .text-3{
     font-size: 25px;
-}
-.home .home-content .text-2{
-    font-size: 70px;
-}
-.home .home-content .text-3{
-    font-size: 35px;
-}
-.home .home-content a{
-    font-size: 23px;
-    padding: 10px 30px;
-}
-.max-width{
-    max-width: 800px;
-} 
-.about .about-content .col{
-    width:100%;
-}
-.about .about-content .col-left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 60px;
-}
-.about .about-content .col-right{
-    flex:100%;
+    margin: 5px 0;
 }
 }
 
-
-@media screen and (max-width:690px) {
-.max-width{
-        padding: 0 23px;
+@media screen and (max-width:768px){
+/* header{
+      display:inline-block;
+} */
+header .logo{
+ padding: 10px;
 }
-.home .home-content .text-2{
-    font-size: 60px;
-}
-.home .home-content .text-3{
-    font-size: 32px;
-}
-.home .home-content a{
-    font-size: 20px;
-}  
-}
-
-
-@media screen and (max-width:500px) {
-.home .home-content .text-2{
-        font-size: 50px;
-}
-.home .home-content .text-3{
-        font-size: 27px;
-} 
+header nav ul li{
+    padding: 0 5px;
+ }
 }
