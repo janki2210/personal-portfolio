@@ -37,10 +37,20 @@ header nav ul li{
 header nav ul li a{
     text-decoration: none;
     color: white;
+    position: relative;
 }
-header nav ul li a:hover{
-    color: black;
-    transition: all 0.3s ease;
+header nav ul li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width:0;
+    height: 2px;
+    background-color:black;
+    transition:all 0.5s linear;
+}
+header nav ul li a:hover::before{
+    width: 100%;
 }
 .menu-btn{
     width: 20%;
@@ -65,10 +75,38 @@ section{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration:30s ;
+    animation-fill-mode:forwards ;
+    animation-iteration-count:infinite ;
+    animation-play-state: running;
+    animation-timing-function:ease-in-out ;
+}
+@keyframes animate{
+0%{
+    background-image: url(..//img/wp3422198.jpg);
+}
+20%{
+    background-image: url(..//img/W5P9jg.jpg);
+}
+40%{
+    background-image: url(..//img/6257508.jpg);
+}
+60%{
+    background-image: url(..//img/photo-1506901437675-cde80ff9c746.jpg);
+}
+80%{
+    background-image: url(..//img/52582632-beautiful-young-lady-with-make-up-face-close-up-of-an-attractive-girl-of-european-appearance-on-dark.jpg);
+}
+100%{
+    background-image: url(..//img/pexels-photo-4491469.jpeg);
+}
 }
 .home .homebox{
     margin:auto 0 auto 40px;
-}   
+} 
 .home .home-content .text-1{
     font-size: 27px;
     text-transform: capitalize;
@@ -92,7 +130,7 @@ section{
     display: inline-block;
     background: crimson;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
@@ -104,6 +142,73 @@ section{
 .home .home-content a:hover{
     color: crimson;
     background: none;
+}
+.home .home-content .icon{
+    height: 50px;
+    margin: 10px;
+    text-align:left;
+}
+.home .home-content .icon i{
+    font-size: 25px;
+    padding: 10px 10px;
+}
+.home .home-content .icon i:hover{
+    border-radius: 50%;
+    background: crimson;
+    transition: all 0.3s linear;
+}
+.home .bubble {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: -100px;
+}
+.home .bubble img{
+    width: 20px;
+    border-radius: 50%;
+     animation: bubble 7s infinite;
+}
+@keyframes bubble{
+0%{
+    transform: translateY(0);
+    opacity: 0;
+}   
+50%{
+    opacity: 1;
+}
+70%{
+    opacity: 1;
+}
+100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+}
+}
+.bubble img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubble img:nth-child(2){
+    animation-delay: 2s;
+}
+.bubble img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubble img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubble img:nth-child(5){
+    animation-delay: 3s;
+}
+.bubble img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubble img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
 }
 /* about section */
 .about{
@@ -200,3 +305,8 @@ header nav ul li{
     padding: 0 5px;
  }
 }
+
+
+
+
+
