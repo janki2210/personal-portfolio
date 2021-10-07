@@ -212,7 +212,6 @@ section{
 }
 /* about section */
 .about{
-    border: 2px solid red;
     height: 100vh;
 }
 .about .abouttext{
@@ -286,11 +285,68 @@ section{
     padding: 10px;
     text-align: left;
 }
+/* services section */
+.services{
+    border: 2px solid red;
+    height: 100vh;
+}
+.services .servicestext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: crimson;
+}
+.services .servicestext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.services .servicescontainer{
+   width: 80%;
+   margin: auto;
+}
+.services .servicescontainer .servicesrow{
+    width: 100%;
+    clear: both;
+    margin-top: 10px;
+}
+.services .servicescontainer .servicesrow .servicesbox{
+    width: 33.333%;
+    float: left;
+    box-sizing: border-box;
+    padding:10px;
+}
+.services .servicescontainer .servicesrow .servicesbox .servicessubbox{
+    text-align: center;
+    overflow: auto;
+    border: 2px solid gray;
+    border-radius: 6px;
+    box-shadow: 0 0 7px crimson;
+}
+.services .servicescontainer .servicesrow .servicesbox .servicessubbox .header{
+    margin: 20px;
+}
+.services .servicescontainer .servicesrow .servicesbox .servicessubbox .header i{
+    font-size: 30px;
+    top: -100%;
+}
+.services .servicescontainer .servicesrow .servicesbox .servicessubbox .title{
+    background-color: brown;
+    margin: 20px;
+}
+.services .servicescontainer .servicesrow .servicesbox .servicessubbox .footer{
+    background-color: brown;
+    margin: 20px;
+}
+
 
 
 
 
 /* responsive */
+/* mobile view */
 @media screen and (max-width:426px){
 header{
   display:inline-block;
@@ -309,6 +365,7 @@ header nav{
     float: right;
     margin: 10px;
 }
+/* home section responsive */
 .home .home-content .text-1{
     margin-top: 92px;
 }
@@ -320,6 +377,7 @@ header nav{
     font-size: 25px;
     margin: 5px 0;
 }
+/* about section responsive */
 .about .aboutcontainer .aboutrow{
     margin-top: 18px;
 }
@@ -354,10 +412,14 @@ header nav{
     font-size: 15px;
     padding: 5px;
 }
+/* services section */
+.services .servicescontainer .servicesrow .servicesbox{
+    width:100%;
+}
 }
 
 
-
+/* tablet view */
 @media screen and (max-width:768px){
 /* header{
       display:inline-block;
@@ -367,7 +429,7 @@ header .logo{
 }
 header nav ul li{
     padding: 0 5px;
- }
+}
 }
 
 
