@@ -46,7 +46,7 @@ header nav ul li a::before{
     top: 100%;
     width:0;
     height: 2px;
-    background-color:black;
+    background-color:gray;
     transition:all 0.5s linear;
 }
 header nav ul li a:hover::before{
@@ -167,7 +167,7 @@ section{
 .home .bubble img{
     width: 20px;
     border-radius: 50%;
-     animation: bubble 7s infinite;
+    animation: bubble 7s infinite;
 }
 @keyframes bubble{
 0%{
@@ -215,23 +215,18 @@ section{
     border: 2px solid red;
     height: 100vh;
 }
-.about h1{
+.about .abouttext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: crimson;
+}
+.about .abouttext h1{
     text-align: center;
     font-size: 30px;
     font-weight: 900;
     text-transform: capitalize;
-}
-.about h1::before{
-    content: '';
-    width: 9%;
-    height: 4px;
-    position: absolute;
-    left: -100%;
-    background: brown;
-}
-.about h1:hover{
-    transition: 1s;
-    left: 0;
 }
 .about .aboutcontainer{
     width: 80%;
@@ -251,13 +246,46 @@ section{
 .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox{
     text-align: center;
     overflow: auto;
-    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 6px;
 } 
 .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox img{
     width: 100%;
     height: 350px;
 }
-
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox p{
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 10px;
+    color: gray;
+    text-transform: capitalize;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left{
+    width: 45%;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    text-transform: capitalize;
+    color: gray;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left h6{
+    font-size: 16px;
+    text-align: left;
+    padding:10px;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
+    width: 45%;
+    float: left;
+    padding: 5px;
+    text-transform: capitalize;
+    color: gray;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right h6{
+    font-size: 16px;
+    padding: 10px;
+    text-align: left;
+}
 
 
 
@@ -292,7 +320,43 @@ header nav{
     font-size: 25px;
     margin: 5px 0;
 }
+.about .aboutcontainer .aboutrow{
+    margin-top: 18px;
 }
+.about .aboutcontainer .aboutrow .aboutbox{
+    width: 100%;
+    padding:0 10px;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox{
+    padding: 0 10px;
+} 
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox img{
+    height: 183px;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox p{
+    padding:8px;
+    font-size: 14px;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left{
+    width: 100%;
+    margin: 5px;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left h6{
+    font-size: 15px;
+    padding: 5px;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
+    width: 100%;
+    margin:5px;
+    box-sizing: border-box;
+}
+.about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right h6{
+    font-size: 15px;
+    padding: 5px;
+}
+}
+
+
 
 @media screen and (max-width:768px){
 /* header{
