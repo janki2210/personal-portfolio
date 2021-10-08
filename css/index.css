@@ -273,6 +273,7 @@ section{
     text-align: left;
     padding:10px;
 }
+
 .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
     width: 45%;
     float: left;
@@ -285,10 +286,11 @@ section{
     padding: 10px;
     text-align: left;
 }
+
 /* services section */
 .services{
-    border: 2px solid red;
     height: 100vh;
+    border: 2px solid red;
 }
 .services .servicestext{
     display: flex;
@@ -296,6 +298,7 @@ section{
     justify-content: center;
     margin: 10px;
     color: crimson;
+    position: relative;
 }
 .services .servicestext h1{
     text-align: center;
@@ -344,7 +347,6 @@ section{
 
 
 
-
 /* responsive */
 /* mobile view */
 @media screen and (max-width:426px){
@@ -364,8 +366,12 @@ header nav{
     display: inline;
     float: right;
     margin: 10px;
+    position: fixed;
 }
 /* home section responsive */
+section{
+    padding: 20px 0;
+}
 .home .home-content .text-1{
     margin-top: 92px;
 }

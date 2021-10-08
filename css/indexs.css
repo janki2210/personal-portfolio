@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    padding:15px;
+    background: crimson;
+    text-align: center;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    float: left;
+}
+header .logo{
+    text-transform: capitalize;
+    padding:10px 50px;
+    text-align: left;
+    float: left;
+}
+header .logo h1{
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+}
+header nav{
+    float: right;
+    padding: 10px 40px;
+    text-transform: capitalize;
+}
+header nav ul{
+    list-style-type: none;
+    font-size: 20px;
+}
+header nav ul li{
+   display: inline-block;
+   padding: 0 20px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+header nav ul li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width:0;
+    height: 2px;
+    background-color:gray;
+    transition:all 0.5s linear;
+}
+header nav ul li a:hover::before{
+    width: 100%;
+}
+.menu-btn{
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    width: 25px;
+    height: 20px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*main section */
+.main{
+    float: left;
+    width: 100%;
+}
+/* home page */
+section{
+    margin: 0;
+    overflow: hidden;
+}
+.main .home{
+    display:flex;
+    height: 100vh;
+    min-height: 500px;
+    color: white;
+    background-image: url(..//img/wp3422198.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration:30s ;
+    animation-fill-mode:forwards ;
+    animation-iteration-count:infinite ;
+    animation-play-state: running;
+    animation-timing-function:ease-in-out ;
+    position: relative;
+}
+@keyframes animate{
+    0%{
+        background-image: url(..//img/wp3422198.jpg);
+    }
+    20%{
+        background-image: url(..//img/W5P9jg.jpg);
+    }
+    40%{
+        background-image: url(..//img/6257508.jpg);
+    }
+    60%{
+        background-image: url(..//img/photo-1506901437675-cde80ff9c746.jpg);
+    }
+    80%{
+        background-image: url(..//img/52582632-beautiful-young-lady-with-make-up-face-close-up-of-an-attractive-girl-of-european-appearance-on-dark.jpg);
+    }
+    100%{
+        background-image: url(..//img/pexels-photo-4491469.jpeg);
+}
+}
+.main .home .homebox{
+   position: absolute;
+   top: 49%;
+   left: 22%;
+}
+.main .home .homebox .home-content .text-1{
+    font-size: 27px;
+    text-transform: capitalize;
+}
+.main .home .homebox .home-content .text-2{
+    font-size: 65px;
+    font-weight: 600;
+    margin-left: -3px;
+    text-transform: capitalize;
+}
+.main .home .homebox .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+.main .home .homebox .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.main .home .homebox .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.main .home .homebox .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+.main .home .homebox .home-content .icon{
+    height: 50px;
+    margin: 10px;
+    text-align:left;
+}
+.main .home .homebox  .home-content .icon i{
+    font-size: 25px;
+    padding: 10px 10px;
+}
+.main .home .homebox  .home-content .icon i:hover{
+    border-radius: 50%;
+    background: crimson;
+    transition: all 0.3s linear;
+}
+.main .home .homebox .bubble {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: -100%;
+    padding: 10px;
+}
+.main .home .homebox .bubble img{
+    width: 20px;
+    border-radius: 50%;
+    animation: bubble 7s infinite;
+}
+@keyframes bubble{
+0%{
+    transform: translateY(0);
+    opacity: 0;
+}   
+50%{
+    opacity: 1;
+}
+70%{
+    opacity: 1;
+}
+100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+}
+}
+.bubble img:nth-child(1){
+    animation-delay: 2s;
+    width: 25px;
+}
+.bubble img:nth-child(2){
+    animation-delay: 2s;
+}
+.bubble img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.bubble img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubble img:nth-child(5){
+    animation-delay: 3s;
+}
+.bubble img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.bubble img:nth-child(7){
+    animation-delay: 7s;
+    width: 35px;
+}
+/* about section */
+.main .about{
+    height: 100vh;
+    background: rgba(240, 128, 128, 0.164);
+}
+.main .about .abouttext{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.main .about .abouttext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.main .about .aboutcontainer{
+    width: 80%;
+    margin: auto;
+}
+.main .about .aboutcontainer .aboutrow{
+    width: 100%;
+    clear: both;
+    margin-top: 10px;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}  
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox{
+    text-align: center;
+    overflow: auto;
+    padding: 10px;
+    border-radius: 6px;
+} 
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox img{
+    width: 100%;
+    height: 350px;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox p{
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 10px;
+    color: gray;
+    text-transform: capitalize;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left{
+    width: 45%;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    text-transform: capitalize;
+    color: gray;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left h6{
+    font-size: 16px;
+    text-align: left;
+    padding:10px;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
+    width: 45%;
+    float: left;
+    padding: 5px;
+    text-transform: capitalize;
+    color: gray;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right h6{
+    font-size: 16px;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* services section */
+.main .services{
+    height: 100vh;
+    background: rgba(240, 128, 128, 0.164);
+}
+.main .services .servicestext{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.main .services .servicestext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+
+
+
+
+/* responsive */
+/* mobile view */
+@media screen and (max-width:426px){
+header{
+    display:inline-block;
+    height: 100px;
+}
+header .logo{
+    padding: 10px;
+    float: left;
+}
+header nav{
+    display: none;
+}
+.menu-btn{
+    display: block;
+    margin: 20px;
+} 
+/*home */
+.main .home .homebox{
+    top:39%;
+    left: 17%;
+}
+.main .home .homebox  .home-content .text-2{
+    font-size: 52px;
+    margin: 5px 0;
+}
+.main .home .homebox .home-content .text-3{
+    font-size: 23px;
+    margin: 5px 0;
+}
+/* about section */
+.main .about .aboutcontainer .aboutrow .aboutbox{
+    width: 100%;
+    padding: 6px;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left{
+    width:100%;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
+    width: 100%;
+}
+/* services */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* tablet view */
+@media screen and (max-width:768px){
+/* home */
+header .logo{
+    float: left;
+}
+header nav ul li{
+    padding: 0 5px;
+}
+/* about */
+/* .main .about .aboutcontainer .aboutrow .aboutbox{
+    width:100%;
+} */
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left{
+    width:100%;
+}
+.main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
+    width:100%;
+}   
+}
