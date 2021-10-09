@@ -49,7 +49,7 @@ header nav ul li a::before{
     left: 0;
     top: 100%;
     width:0;
-    height: 2px;
+    height: 4px;
     background-color:gray;
     transition:all 0.5s linear;
 }
@@ -244,6 +244,20 @@ section{
     font-weight: 900;
     text-transform: capitalize;
     color: crimson;
+    position: relative;
+}
+.main .about .abouttext h1::before{
+    content: '';
+    position: absolute;
+    left: 45%;
+    top: 100%;
+    width:0;
+    height: 4px;
+    background-color:gray;
+    transition:all 0.5s linear;
+}
+.main .about .abouttext h1:hover:before{
+    width: 10%;
 }
 .main .about .aboutcontainer{
     width: 80%;
@@ -309,6 +323,7 @@ section{
 .main .services{
     height: 100vh;
     background: rgba(240, 128, 128, 0.164);
+    border: 2px solid red;
 }
 .main .services .servicestext{
     text-align: center;
@@ -321,6 +336,20 @@ section{
     font-weight: 900;
     text-transform: capitalize;
     color: crimson;
+    position: relative;
+}
+.main .services .servicestext h1::before{
+    content: '';
+    position: absolute;
+    left: 45%;
+    top: 100%;
+    width:0;
+    height: 4px;
+    background-color:gray;
+    transition:all 0.5s linear;
+}
+.main .services .servicestext h1:hover:before{
+    width: 10%;
 }
 .main .services .servicescontainer{
     width: 80%;
@@ -340,7 +369,6 @@ section{
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox{
     text-align: center;
     /* overflow: auto; */
-    border: 2px solid gray;
     border-radius: 6px;
     box-shadow: 0 0 7px crimson;
     position: relative;
@@ -384,20 +412,127 @@ section{
     border-color: red;
 } 
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox .header{
-    margin: 20px;
+    margin:10px 0;
 }
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox .header i{
     font-size: 30px;
     top: -100%;
+    border-radius: 50%;
+    background-color:rgba(128, 128, 128, 0.39);
+    padding: 15px;
 }
 .main .services .servicescontainer .servicesrow .servicesbox:hover  .servicessubbox .header i{
     color: red;
 }
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox .title{
     margin: 10px;
+    text-transform: capitalize;
 }
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox .footer{
     margin:10px;
+}
+
+/* skills section */
+.main .skills{
+    height: 100vh;
+    background: rgba(240, 128, 128, 0.164);
+}
+.main .skills .skillstext{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.main .skills .skillstext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: crimson;
+    position: relative;
+}
+.main .skills .skillstext h1::before{
+    content: '';
+    position: absolute;
+    left: 45%;
+    top: 100%;
+    width:0;
+    height: 4px;
+    background-color:gray;
+    transition:all 0.5s linear;
+}
+.main .skills .skillstext h1:hover:before{
+    width: 10%;
+}
+.main .skills .skillscontainer{
+    width: 80%;
+    margin: auto;
+}
+.main .skills .skillscontainer .skillsrow{
+    width: 100%;
+    clear: both;
+    margin-top: 10px;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox{
+    width: 33.333%;
+    float: left;
+    box-sizing: border-box;
+    padding:10px;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox{
+    text-align:center;
+    /* overflow: auto; */
+    border-radius: 6px;
+    box-shadow: 0 0 7px crimson;
+    position: relative;
+    overflow: hidden;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header{
+    margin: 10px 0;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header svg circle{
+    width: 150px;
+    height: 150px;
+    fill:rgba(128, 128, 128, 0.39);
+    stroke-width: 10;
+    stroke: tomato;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+    animation: stroke 1s steps(500) forwards;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header .number{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: stroke 1s steps(100) forwards;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header .number h1{
+    font-size: 20px;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header .number h1 span{
+    font-size: 20px;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .text{
+    padding: 10px;
+    color:black;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+@keyframes stroke{
+    0%{
+        stroke-dashoffset: 1;
+    }
 }
 
 /* responsive */
@@ -447,11 +582,19 @@ header nav{
 }
 /* services */
 .main .services{
-    height:283vh;
+    /* height:283vh; */
+    height: 289vh;
 }
 .main .services .servicescontainer .servicesrow .servicesbox{
     width: 100%;
     padding: 6px;
+}
+/* skills */
+.main .skills{
+    height: 212vh;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox{
+    width: 100%;
 }
 }
 
