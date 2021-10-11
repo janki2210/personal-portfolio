@@ -16,7 +16,6 @@ header {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    transition: 1s;
 }
 header .logo{
     text-transform: capitalize;
@@ -211,7 +210,7 @@ section{
 .main .about .abouttext h1::before{
     content: '';
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: 100%;
     width:0;
     height: 4px;
@@ -219,7 +218,8 @@ section{
     transition:all 0.5s linear;
 }
 .main .about .abouttext h1:hover:before{
-    width: 10%;
+    width: 100%;
+    left: 0;
 }
 .main .about .aboutcontainer{
     width: 80%;
@@ -306,7 +306,7 @@ section{
 .main .services .servicestext h1::before{
     content: '';
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: 100%;
     width:0;
     height: 4px;
@@ -314,7 +314,8 @@ section{
     transition:all 0.5s linear;
 }
 .main .services .servicestext h1:hover:before{
-    width: 10%;
+    width: 100%;
+    left: 0;
 }
 .main .services .servicescontainer{
     width: 80%;
@@ -422,7 +423,7 @@ section{
 .main .skills .skillstext h1::before{
     content: '';
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: 100%;
     width:0;
     height: 4px;
@@ -430,7 +431,8 @@ section{
     transition:all 0.5s linear;
 }
 .main .skills .skillstext h1:hover:before{
-    width: 10%;
+    width: 100%;
+    left: 0;
 }
 .main .skills .skillscontainer{
     width: 80%;
@@ -495,8 +497,107 @@ section{
         width: 75%;
     }
 }
-
-
+/* education */
+.main .education{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 100px 0;
+    background: rgba(240, 128, 128, 0.164);
+}
+.main .education .educationtext{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.main .education .educationtext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: crimson;
+    position: relative;
+}
+.main .education .educationtext h1::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width:0;
+    height: 4px;
+    background-color:gray;
+    transition:all 0.5s linear;
+}
+.main .education .educationtext h1:hover:before{
+    width: 100%;
+    left: 0;
+}
+.main .education .educationcontainer{
+    width: 80%;
+    margin: auto;
+    border-left: 2px solid rgba(128, 128, 128, 0.158);
+    position: relative;
+}
+.main .education .educationcontainer .educationrow{
+    width: 100%;
+    clear: both;
+    margin-top: 10px;
+}
+.main .education .educationcontainer .educationrow .educationbox{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding:10px;
+    position: relative;
+}
+.main .education .educationcontainer .educationrow .educationbox::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border: 2px solid #4a89dc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 60px;
+    left: -54px;
+    z-index: 1;
+}
+.main .education .educationcontainer .educationrow .educationbox::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-color: #4a89dc;
+    width: 63px;
+    height: 2px;
+    top: 64px;
+    left: -42px;
+    z-index: 1;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox{
+    text-align:left;
+    /* overflow: auto; */
+    width: 70%;
+    height: 100px;
+    border-radius: 6px;
+    box-shadow: 0 0 7px crimson;
+    padding: 10px;
+    margin-left:13px;
+    margin-bottom: 50px;    
+    border-left: 5px solid #4a89dc;
+    border-radius: 6px;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox h5{
+   padding: 10px;
+   font-size: 20px;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox h6{
+    padding: 10px;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox h3{
+    padding: 10px;
+    text-transform: capitalize;
+}
 
 
 
@@ -550,6 +651,33 @@ header nav{
 /* skills */
 .main .skills .skillscontainer .skillsrow .skillsbox{
     width: 100%;
+}
+/* education */
+.main .education .educationcontainer .educationrow .educationbox{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding:10px;
+}
+.main .education .educationcontainer .educationrow .educationbox::before{
+    top: 60px;
+    left: -27px;
+}
+.main .education .educationcontainer .educationrow .educationbox::after{
+    top: 64px;
+    left: -15px;
+    width: 38px;
+    height: 2px;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox h5{
+    font-size: 15px;
+    padding: 5px;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox h6{
+    padding:5px;
+}
+.main .education .educationcontainer .educationrow .educationbox .educationsubbox h3{
+    padding: 5px;
 }
 }
 
