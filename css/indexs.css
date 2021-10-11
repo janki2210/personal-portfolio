@@ -13,6 +13,10 @@ header {
     left: 0;
     top: 0;
     float: left;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    transition: 1s;
 }
 header .logo{
     text-transform: capitalize;
@@ -27,12 +31,12 @@ header .logo h1{
 }
 header nav{
     float: right;
-    padding: 10px 40px;
     text-transform: capitalize;
 }
 header nav ul{
     list-style-type: none;
     font-size: 20px;
+    float: right;
 }
 header nav ul li{
    display: inline-block;
@@ -42,6 +46,9 @@ header nav ul li a{
     text-decoration: none;
     color: white;
     position: relative;
+    display: inline-block;
+    font-size: 18px;
+    text-transform:capitalize;
 }
 header nav ul li a::before{
     content: '';
@@ -68,7 +75,6 @@ header nav ul li a:hover::before{
     text-align: center;
     font-size: 20px;
 }
-
 /*main section */
 .main{
     float: left;
@@ -120,7 +126,7 @@ section{
 }
 .main .home .homebox{
    position: absolute;
-   top: 49%;
+   top: 38%;
    left: 22%;
 }
 .main .home .homebox .home-content .text-1{
@@ -142,7 +148,7 @@ section{
     color: crimson;
     font-weight: 500;
 }
-.main .home .homebox .home-content a{
+.main .home .homebox .home-content button{
     display: inline-block;
     background: crimson;
     color: white;
@@ -155,7 +161,7 @@ section{
     text-transform: capitalize;
     text-decoration: none;
 }
-.main .home .homebox .home-content a:hover{
+.main .home .homebox .home-content button:hover{
     color: crimson;
     background: none;
 }
@@ -164,6 +170,10 @@ section{
     margin: 10px;
     text-align:left;
 }
+.main .home .homebox  .home-content .icon a{
+    text-decoration: none;
+    color: white;
+}
 .main .home .homebox  .home-content .icon i{
     font-size: 25px;
     padding: 10px 10px;
@@ -171,71 +181,23 @@ section{
 .main .home .homebox  .home-content .icon i:hover{
     border-radius: 50%;
     background: crimson;
-    /* transition: all 0.3s linear; */
+    transition: all 0.3s linear;
     transition: all 0.3s initial
 }
-.main .home .homebox .bubble {
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    bottom: -100%;
-    padding: 10px;
-}
-.main .home .homebox .bubble img{
-    width: 20px;
-    border-radius: 50%;
-    animation: bubble 7s infinite;
-}
-@keyframes bubble{
-0%{
-    transform: translateY(0);
-    opacity: 0;
-}   
-50%{
-    opacity: 1;
-}
-70%{
-    opacity: 1;
-}
-100%{
-    transform: translateY(-80vh);
-    opacity: 0;
-}
-}
-.bubble img:nth-child(1){
-    animation-delay: 2s;
-    width: 25px;
-}
-.bubble img:nth-child(2){
-    animation-delay: 2s;
-}
-.bubble img:nth-child(3){
-    animation-delay: 3s;
-    width: 25px;
-}
-.bubble img:nth-child(4){
-    animation-delay: 4.5s;
-}
-.bubble img:nth-child(5){
-    animation-delay: 3s;
-}
-.bubble img:nth-child(6){
-    animation-delay: 6s;
-    width: 20px;
-}
-.bubble img:nth-child(7){
-    animation-delay: 7s;
-    width: 35px;
-}
+
 /* about section */
 .main .about{
-    height: 100vh;
+    /* height: 100vh; */
     background: rgba(240, 128, 128, 0.164);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 100px 0;
 }
 .main .about .abouttext{
     text-align: center;
-    padding-top: 100px;
     padding-bottom: 30px;
 }
 .main .about .abouttext h1{
@@ -276,7 +238,7 @@ section{
 }  
 .main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox{
     text-align: center;
-    overflow: auto;
+    /* overflow: auto; */
     padding: 10px;
     border-radius: 6px;
 } 
@@ -321,13 +283,16 @@ section{
 
 /* services section */
 .main .services{
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 100px 0;
     background: rgba(240, 128, 128, 0.164);
-    border: 2px solid red;
 }
 .main .services .servicestext{
     text-align: center;
-    padding-top: 100px;
     padding-bottom: 30px;
 }
 .main .services .servicestext h1{
@@ -434,12 +399,16 @@ section{
 
 /* skills section */
 .main .skills{
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 100px 0;
     background: rgba(240, 128, 128, 0.164);
 }
 .main .skills .skillstext{
     text-align: center;
-    padding-top: 100px;
     padding-bottom: 30px;
 }
 .main .skills .skillstext h1{
@@ -473,67 +442,63 @@ section{
     margin-top: 10px;
 }
 .main .skills .skillscontainer .skillsrow .skillsbox{
-    width: 33.333%;
+    width:50%;
     float: left;
     box-sizing: border-box;
     padding:10px;
 }
 .main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox{
     text-align:center;
-    /* overflow: auto; */
+    overflow: auto;
     border-radius: 6px;
     box-shadow: 0 0 7px crimson;
-    position: relative;
+    padding: 10px;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox h3{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    text-transform: capitalize;
+}
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .progressbar{
+    width: 70%;
+    height: 12px;
+    background-color: lightgrey;
+    margin: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header{
-    margin: 10px 0;
-}
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header svg{
-    position: relative;
-    width: 150px;
-    height: 150px;
-}
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header svg circle{
-    width: 150px;
-    height: 150px;
-    fill:rgba(128, 128, 128, 0.39);
-    stroke-width: 10;
-    stroke: tomato;
-    transform: translate(5px,5px);
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-    stroke-linecap: round;
-    animation: stroke 1s steps(500) forwards;
-}
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header .number{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .progressbar .html{
+    width: 90%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: stroke 1s steps(100) forwards;
+    background-color: blue;
+    animation: color1 8s;
 }
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header .number h1{
-    font-size: 20px;
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .progressbar .css{
+    width: 80%;
+    height: 100%;
+    background-color:crimson;
+    animation: color1 8s;
 }
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .header .number h1 span{
-    font-size: 20px;
+.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .progressbar .js{
+    width: 60%;
+    height: 100%;
+    background-color:chocolate;
+    animation: color1 8s;
 }
-.main .skills .skillscontainer .skillsrow .skillsbox .skillssubbox .text{
-    padding: 10px;
-    color:black;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-@keyframes stroke{
+@keyframes color1{
     0%{
-        stroke-dashoffset: 1;
+        width: 0%;
+    }
+    100%{
+        width: 75%;
     }
 }
+
+
+
+
 
 /* responsive */
 /* mobile view */
@@ -567,9 +532,6 @@ header nav{
     margin: 5px 0;
 }
 /* about section */
-.main .about{
-    height: 212vh;
-}
 .main .about .aboutcontainer .aboutrow .aboutbox{
     width: 100%;
     padding: 6px;
@@ -581,18 +543,11 @@ header nav{
     width: 100%;
 }
 /* services */
-.main .services{
-    /* height:283vh; */
-    height: 289vh;
-}
 .main .services .servicescontainer .servicesrow .servicesbox{
     width: 100%;
     padding: 6px;
 }
 /* skills */
-.main .skills{
-    height: 212vh;
-}
 .main .skills .skillscontainer .skillsrow .skillsbox{
     width: 100%;
 }
@@ -614,8 +569,12 @@ header nav{
 header .logo{
     float: left;
 }
+header nav ul{
+    display: flex;
+    font-size: 15px;
+}
 header nav ul li{
-    padding: 0 5px;
+    padding: 0 10px;
 }
 /* about */
 /* .main .about .aboutcontainer .aboutrow .aboutbox{
@@ -627,4 +586,5 @@ header nav ul li{
 .main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
     width:100%;
 }
+/* services */
 }
