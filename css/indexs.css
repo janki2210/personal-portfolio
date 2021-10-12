@@ -397,7 +397,6 @@ section{
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox .footer{
     margin:10px;
 }
-
 /* skills section */
 .main .skills{
     display: flex;
@@ -581,7 +580,7 @@ section{
     height: 100px;
     border-radius: 6px;
     box-shadow: 0 0 7px crimson;
-    padding: 10px;
+    padding: 20px;
     margin-left:13px;
     margin-bottom: 50px;    
     border-left: 5px solid #4a89dc;
@@ -598,7 +597,160 @@ section{
     padding: 10px;
     text-transform: capitalize;
 }
-
+/* contct */
+.main .contact{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 100px 0;
+    background: rgba(240, 128, 128, 0.164);
+}
+.main .contact .contacttext{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.main .contact .contacttext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: crimson;
+    position: relative;
+}
+.main .contact .contacttext h1::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width:0;
+    height: 4px;
+    background-color:gray;
+    transition:all 0.5s linear;
+}
+.main .contact .contacttext h1:hover:before{
+    width: 100%;
+    left: 0;
+}
+.main .contact .contactcontainer{
+    width: 80%;
+    margin: auto;
+}
+.main .contact .contactcontainer .contactrow{
+    width: 100%;
+    clear: both;
+    margin-top: 10px;
+}
+.main .contact .contactcontainer .contactrow  .contactbox{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding:10px;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox{
+    text-align: center;
+    overflow: auto;
+    padding: 10px;
+}
+.main .contact .contactcontainer .contactrow .contactbox .iconbar{
+   width: 50px;
+   height: 50px;
+   line-height: 50px;
+   font-size: 30px;
+   border-radius: 50%;
+   margin: 5px;
+   padding: 5px;
+   text-align: center;
+   position:relative;
+   z-index: 3;
+   float: left;
+   color:black;
+}
+.main .contact .contactcontainer .contactrow .contactbox .iconbar:hover{
+   background: crimson;
+   transition: 1s;
+}
+.main .contact .contactcontainer .contactrow .contactbox .contacttext{
+    overflow: hidden;
+    position: absolute;
+    left: 20%;
+    margin: 10px;
+    box-sizing: border-box;
+    color: gray;
+}
+.main .contact .contactcontainer .contactrow .contactbox .contacttext h4{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-family: 'Rambla', sans-serif;
+    text-align: left;
+    text-transform: capitalize;
+}
+.main .contact .contactcontainer .contactrow .contactbox .contacttext h5{
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Rambla', sans-serif;
+    text-transform: capitalize;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform{
+    width: 80%;
+    padding: 25px;
+    background: white;
+    text-transform: capitalize;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform h2{
+    font-size: 30px;
+    color: gray;
+    font-weight: 500;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox{
+   width: 100%;
+   position: relative;
+   margin-top: 10px;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox input,textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    resize: none;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox span{
+    position:absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: black;
+    text-transform: capitalize;
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox input:focus ~ span,
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox input:valid ~ span,
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox textarea:focus ~ span,
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox textarea:valid ~ span
+{
+    color:red;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.main .contact .contactcontainer .contactrow  .contactbox .contactsubbox .contactform .inputbox input[type="submit"]{
+   width: 100px;
+   background: crimson;
+   color: white;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   font-size: 18px;
+   border-radius: 6px;
+   text-transform: capitalize;
+}
 
 
 /* responsive */
@@ -678,6 +830,26 @@ header nav{
 }
 .main .education .educationcontainer .educationrow .educationbox .educationsubbox h3{
     padding: 5px;
+}
+/* contact */
+.main .contact .contactcontainer .contactrow  .contactbox{
+    width: 100%;
+}
+.main .contact .contactcontainer .contactrow .contactbox .iconbar{
+    font-size: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+ .main .contact .contactcontainer .contactrow .contactbox .contacttext{
+    left:31%;
+}
+.main .contact .contactcontainer .contactrow .contactbox .contacttext h4{
+    text-align: left;
+    font-size: 14px;
+}
+.main .contact .contactcontainer .contactrow .contactbox .contacttext h5{
+    text-align: left;
+    font-size: 14px;
 }
 }
 
