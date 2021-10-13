@@ -823,11 +823,10 @@ header .logo{
     float: left;
 }
 nav ul {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    /* background: rgba(17, 16, 16, 0.582); */
     background: rgba(220, 20, 60, 0.432);
-    top: 20%;
+    top: 162%;
     left: -120%;
     text-align: center;
     transition: 1s;
