@@ -754,6 +754,15 @@ section{
    border-radius: 6px;
    text-transform: capitalize;
 }
+.main .contact .map{
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+}
+.main .contact .map img{
+    width: 100%;
+    height: 550px;
+}
 /* footer */
 .main footer{
     width: 100%;
