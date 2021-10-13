@@ -830,6 +830,7 @@ nav ul {
     left: -120%;
     text-align: center;
     transition: 1s;
+    overflow: hidden;
 }
 nav ul.show {
     left: -20px;
