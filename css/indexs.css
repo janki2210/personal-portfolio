@@ -29,17 +29,17 @@ header .logo h1{
     color: white;
 }
 header nav{
-    float: right;
-    text-transform: capitalize;
+    text-align: right;
+    flex: 1;
 }
 header nav ul{
     list-style-type: none;
-    font-size: 20px;
+    font-size: 15px;
     float: right;
 }
 header nav ul li{
    display: inline-block;
-   padding: 0 20px;
+   padding: 0 10px;
 }
 header nav ul li a{
     text-decoration: none;
@@ -62,7 +62,7 @@ header nav ul li a::before{
 header nav ul li a:hover::before{
     width: 100%;
 }
-.menu-btn{
+#menu-btn{
     padding: 5px;
     position: absolute;
     top: 10px;
@@ -139,7 +139,7 @@ section{
     text-transform: capitalize;
 }
 .main .home .homebox .home-content .text-3{
-    font-size: 40px;
+    font-size: 30px;
     margin: 5px 0;
     text-transform: capitalize;
 }
@@ -159,6 +159,10 @@ section{
     transition: all 0.3s ease;
     text-transform: capitalize;
     text-decoration: none;
+}
+.main .home .homebox .home-content button a{
+   text-decoration: none;
+   color: white;
 }
 .main .home .homebox .home-content button:hover{
     color: crimson;
@@ -183,10 +187,8 @@ section{
     transition: all 0.3s linear;
     transition: all 0.3s initial
 }
-
 /* about section */
 .main .about{
-    /* height: 100vh; */
     background: rgba(240, 128, 128, 0.164);
     display: flex;
     align-items: center;
@@ -238,7 +240,6 @@ section{
 }  
 .main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox{
     text-align: center;
-    /* overflow: auto; */
     padding: 10px;
     border-radius: 6px;
 } 
@@ -358,7 +359,6 @@ section{
 }
 .main .education .educationcontainer .educationrow .educationbox .educationsubbox{
     text-align:left;
-    /* overflow: auto; */
     width: 70%;
     height: 100px;
     border-radius: 6px;
@@ -481,6 +481,42 @@ section{
         width: 75%;
     }
 }
+/* portfolio */
+.main .portfolio{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-flow: column;
+    padding: 100px 0;
+    background: rgba(240, 128, 128, 0.164);
+}
+.main .portfolio .portfoliotext{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.main .portfolio .portfoliotext h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: crimson;
+    position: relative;
+}
+.main .portfolio .portfoliotext h1::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width:0;
+    height: 4px;
+    transition:all 0.5s linear;
+}
+.main .portfolio .portfoliotext h1:hover:before{
+    width: 100%;
+    left: 0;
+    background:gray;
+}
 /* services section */
 .main .services{
     display: flex;
@@ -515,7 +551,7 @@ section{
 .main .services .servicestext h1:hover:before{
     width: 100%;
     left: 0;
-    background: crimson;
+    background:gray;
 }
 .main .services .servicescontainer{
     width: 80%;
@@ -534,9 +570,7 @@ section{
 }
 .main .services .servicescontainer .servicesrow .servicesbox .servicessubbox{
     text-align: center;
-    /* overflow: auto; */
     border-radius: 6px;
-    /* box-shadow: 0 0 7px crimson; */
     position: relative;
     overflow: hidden;
     color: gray;
@@ -546,10 +580,6 @@ section{
     width:0%;
     height: 0%;
     position: absolute;
-    /* left: -100%;
-    top: 72%;
-    background-color: darkblue;
-    border: 2px solid red; */
     left: 0;
     bottom: 0;
     border-bottom: 3px solid transparent;
@@ -754,12 +784,11 @@ section{
    border-radius: 6px;
    text-transform: capitalize;
 }
-.main .contact .map{
-    margin: 10px;
+.main .map{
     text-align: center;
     width: 100%;
 }
-.main .contact .map img{
+.main .map img{
     width: 100%;
     height: 550px;
 }
@@ -777,6 +806,11 @@ section{
    font-size: 15px;
    padding: 10px;
 }
+
+
+
+
+
 /* responsive */
 /* mobile view */
 @media screen and (max-width:426px){
@@ -788,10 +822,24 @@ header .logo{
     padding: 10px;
     float: left;
 }
-header nav{
-    display: none;
+nav ul {
+    position: fixed;
+    width: 100%;
+    /* background: rgba(17, 16, 16, 0.582); */
+    background: rgba(220, 20, 60, 0.432);
+    top: 20%;
+    left: -120%;
+    text-align: center;
+    transition: 1s;
 }
-.menu-btn{
+nav ul.show {
+    left: -20px;
+}
+header nav ul li{
+    display: block;
+    padding: 14px;
+}
+#menu-btn{
     display: block;
     margin: 20px;
 } 
@@ -893,23 +941,16 @@ header nav{
 /* home */
 header .logo{
     float: left;
+    padding: 10px;
 }
-header nav ul{
-    display: flex;
-    font-size: 15px;
-}
-header nav ul li{
-    padding: 0 10px;
+header nav{
+    padding: 10px;
 }
 /* about */
-/* .main .about .aboutcontainer .aboutrow .aboutbox{
-    width:100%;
-} */
 .main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-left{
     width:100%;
 }
 .main .about .aboutcontainer .aboutrow .aboutbox .aboutsubbox .about-right{
     width:100%;
 }
-/* services */
 }

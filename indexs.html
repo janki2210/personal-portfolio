@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/indexs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- header section start -->
@@ -16,7 +18,7 @@
         <h1>portfolio</h1>
     </div>
     <nav>
-        <ul>
+        <ul class="show">
             <li><a href="#home">home</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#education">education</a></li>
@@ -26,9 +28,9 @@
             <li><a href="#contact">contact</a></li>
         </ul>
    </nav>
-   <div class="menu-btn">
-       <i class="fas fa-bars"></i>
-   </div>
+   <label id="menu-btn">
+       <i class="fas fa-ellipsis-h"></i>
+    </label>
 </header>
 <!--header section end  -->
 <div class="main">
@@ -43,9 +45,9 @@
                    janki patel
                </div>
                <div class="text-3">
-                   and i am a <span>web designer</span> 
+                   and i am a <span>web designer</span>
                </div>
-               <button>hire me</button> 
+               <button><a href="">hire me</a></button> 
                <div class="icon">
                 <a href="https://www.facebook.com/?stype=lo&jlou=Affn3tJAEGDnPlKSIX-TuaBenlXOMa7GC5dbGwAwoga1GfXCqqqg0s-CkvH6cG46zQH9ffRiVXo_sLF3YQgL70CYXc7KdzlPPVae0hiZcWPhjQ&smuh=50036&lh=Ac_pngI0Zif6cBYSZzI"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>                 
@@ -166,6 +168,17 @@
         </div>
     </section>
     <!-- skills section end -->
+
+    <!-- portfolio section start -->
+    <section>
+        <div class="portfolio" id="portfolio">
+            <div class="portfoliotext">
+                <h1>portfolio</h1>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio section end -->
+
 
     <!-- services section start -->
     <section>
@@ -324,12 +337,11 @@
                    </div>
                </div>
             </div>
-           <div class="map">
-            <img src="img/screenshot-www.google.com-2021.09.24-13_32_21.png" alt="">
-           </div>
+        </div>
+       <div class="map">
+        <img src="img/screenshot-www.google.com-2021.09.24-13_32_21.png" alt="">
        </div>
     </section>
-    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1846.067059183026!2d73.15258695789582!3d22.272908828423123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc640a6414d63%3A0x68b338ae14bac2f6!2sGunatitdham%20Society!5e0!3m2!1sen!2sin!4v1618385412810!5m2!1sen!2sin" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
     <!-- contact section end -->
     
     <!-- footer start -->
