@@ -517,6 +517,48 @@ section{
     left: 0;
     background:gray;
 }
+.main .portfolio .portfoliocontainer{
+    width: 80%;
+    margin: auto;
+}
+.main .portfolio .portfoliocontainer .portfoliorow{
+   width: 100%;
+   clear: both;
+   margin-top: 10px;
+}
+.main .portfolio .portfoliocontainer .portfoliorow button{
+    height: 36px;
+    width: 15%;
+    padding: 10px;
+    margin: 5px;
+    background: crimson;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.main .portfolio .portfoliocontainer .portfoliorow button.active{
+    background: lightseagreen;
+    color: magenta;
+}
+.main .portfolio .portfoliocontainer .portfoliorow .portfoliobox{
+    width:33.333%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.main .portfolio .portfoliocontainer .portfoliorow .portfoliobox .portfoliosubbox{
+    text-align: center;
+    overflow: auto;
+}
+.main .portfolio .portfoliocontainer .portfoliorow .portfoliobox .portfoliosubbox img{
+    width: 100%;
+    height: 250px;
+}
 /* services section */
 .main .services{
     display: flex;
@@ -822,9 +864,6 @@ header .logo{
     padding: 10px;
     float: left;
 }
-header nav{
-    overflow: hidden;
-}
 header nav ul {
     position: absolute;
     width: 100%;
@@ -833,10 +872,10 @@ header nav ul {
     left: -120%;
     text-align: center;
     transition: 1s;
+    overflow: hidden;
 }
 header nav ul.show {
     left: -20px;
-    overflow: hidden;
 }
 header nav ul li{
     display: block;
