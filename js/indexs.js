@@ -5,17 +5,17 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('.btn').click(function() {
+    $('.buttons').click(function() {
       const value = $(this).attr('data-filter');
       if(value == 'all'){
-          $('.portfoliobox').show('1000');
+          $('.image').show('1000');
       }
       else{
-        $('.portfoliobox').not('.'+value).hide('1000'); 
-        $('.portfoliobox').filter('.'+value).show('1000'); 
+        $('.image').not('.'+value).hide('1000'); 
+        $('.image').filter('.'+value).show('1000'); 
       }
     });
-    $('.portfoliobox').click(function(){
+    $('.image').click(function(){
         $(this).addclass('active').siblings().removeclass('active');
     });
 });

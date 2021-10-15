@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/indexs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <!-- header section start -->
@@ -174,65 +174,61 @@
             <div class="portfoliotext">
                 <h1>portfolio</h1>
             </div>
-            <div class="portfoliocontainer">
-                <div class="portfoliorow">
-                    <button class="btn active" data-filter="all">all</button>
-                    <button class="btn" data-filter="app">app</button>
-                    <button class="btn" data-filter="basic">basic</button>
-                    <button class="btn" data-filter="login">login</button>
-                    <button class="btn" data-filter="gallary">gallary</button>
-                    <button class="btn" data-filter="pricelist">pricelist</button>
-                </div>
-                <div class="portfoliorow">
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
+            <div class="gallary">
+                <ul class="controls">
+                    <li class="buttons active" data-filter="all">all</li>
+                    <li class="buttons" data-filter="app">app</li>
+                    <li class="buttons" data-filter="basic">basic</li>
+                    <li class="buttons" data-filter="login">login</li>
+                    <li class="buttons" data-filter="photo">photo</li>
+                    <li class="buttons" data-filter="pricelist">pricelist</li>
+                </ul>
+                <div class="image-container">
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-15_18_57.png" class="image app">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-15_18_57.png" alt="">
+                        <div class="iconbar">
+                            <i class="fab fa-facebook"></i>
                         </div>
-                    </div>
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="portfoliorow">
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="portfoliorow">
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="portfoliobox">
-                        <div class="portfoliosubbox">
-                            <img src="img/pexels-photo-891059.jpeg" alt="">
-                        </div>
-                    </div>
+                    </a>
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-15_21_11.png" class="image app">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-15_21_11.png" alt="">
+                    </a>
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-15_20_02.png" class="image app">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-15_20_02.png" alt="">
+                    </a>
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-16_22_28.png" class="image app">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-16_22_28.png" alt="">
+                    </a>
+
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-16_07_00.png" class="image basic">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-16_07_00.png" alt="">
+                    </a>
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-16_05_53.png" class="image basic">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-16_05_53.png" alt="">
+                    </a>
+                    <a href="img/screenshot2-127.0.0.1_5500-2021.09.08-14_21_42.png" class="image basic">
+                        <img src="img/screenshot2-127.0.0.1_5500-2021.09.08-14_21_42.png" alt="">
+                    </a>
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-16_03_13.png" class="image basic">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-16_03_13.png" alt="">
+                    </a>
+
+                    <a href="img/screenshot9.png" class="image login">
+                        <img src="img/screenshot9.png" alt="">
+                    </a>
+                    
+                    <a href="img/screenshot9.png" class="image photo">
+                        <img src="img/screenshot9.png" alt="">
+                    </a>
+                
+
+                    <a href="img/screenshot-127.0.0.1_5500-2021.10.15-16_21_21.png" class="image pricelist">
+                        <img src="img/screenshot-127.0.0.1_5500-2021.10.15-16_21_21.png" alt="">
+                    </a>
+                    <a href="img/46-469886_liqu-bubble-transparent-background-bubbles-png-png-download.png" class="image pricelist">
+                        <img src="img/46-469886_liqu-bubble-transparent-background-bubbles-png-png-download.png" alt="">
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -412,7 +408,8 @@
 </div>
 
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/indexs.js"></script>
 
 

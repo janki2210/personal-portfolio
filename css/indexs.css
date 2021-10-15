@@ -517,47 +517,67 @@ section{
     left: 0;
     background:gray;
 }
-.main .portfolio .portfoliocontainer{
-    width: 80%;
-    margin: auto;
+.main .portfolio .gallary{
+    min-height: 100vh;
+    padding-bottom: 100px;
 }
-.main .portfolio .portfoliocontainer .portfoliorow{
-   width: 100%;
-   clear: both;
-   margin-top: 10px;
+.main .portfolio .gallary .controls{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   padding: 20px 0;
+   list-style-type: none;
 }
-.main .portfolio .portfoliocontainer .portfoliorow button{
-    height: 36px;
-    width: 15%;
-    padding: 10px;
-    margin: 5px;
-    background: crimson;
-    text-transform: capitalize;
-    border: none;
-    border-radius: 6px;
+.main .portfolio .gallary .controls .buttons{
+   height: 20px;
+   width: 100px;
+   background: crimson;
+   color: white;
+   font-size: 20px;
+   line-height: 20px;
+   cursor: pointer;
+   margin: 10px;
+   padding: 10px;
+   text-align: center;
+   text-transform: capitalize;
+}
+.main .portfolio .gallary .controls .buttons.active{
+    background: blue;
     color: white;
-    font-size: 15px;
-    cursor: pointer;
 }
-.main .portfolio .portfoliocontainer .portfoliorow button.active{
-    background: lightseagreen;
-    color: magenta;
+.main .portfolio .gallary .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.main .portfolio .portfoliocontainer .portfoliorow .portfoliobox{
-    width:33.333%;
-    float: left;
-    box-sizing: border-box;
-    padding: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.main .portfolio .portfoliocontainer .portfoliorow .portfoliobox .portfoliosubbox{
-    text-align: center;
-    overflow: auto;
-}
-.main .portfolio .portfoliocontainer .portfoliorow .portfoliobox .portfoliosubbox img{
-    width: 100%;
+.main .portfolio .gallary .image-container .image{
     height: 250px;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid gray;
+    margin: 20px;
+}
+.main .portfolio .gallary .image-container .image::before{
+    content: '';
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: -21%;
+    background: crimson;
+}
+.main .portfolio .gallary .image-container .image:hover:before{
+    bottom: 0;
+    transition: 1s;
+}
+.main .portfolio .gallary .image-container .image img{
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 /* services section */
 .main .services{
@@ -945,6 +965,11 @@ header nav ul li{
 .main .education .educationcontainer .educationrow .educationbox .educationsubbox h3{
     padding: 5px;
 }
+/* portfolio */
+.main .portfolio .gallary .image-container .image{
+    width: 100%;
+}
+
 /* contact */
 .main .contact .contactcontainer .contactrow  .contactbox{
     width: 100%;
